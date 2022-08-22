@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { environment } from 'src/environments/environment';
+import { EffectsModule } from '@ngrx/effects';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { environment } from 'src/environments/environment';
       maxAge: 25,
       logOnly: environment.production
     }),
-    HttpClientModule
+    HttpClientModule,
+    EffectsModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]
