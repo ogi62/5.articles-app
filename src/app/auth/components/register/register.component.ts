@@ -36,6 +36,6 @@ export class RegisterComponent implements OnInit {
 
     onSubmit(): void {
         console.log(this.form.value,"Check if form is valid ?", this.form.valid);
-        this.store.dispatch(registerAction(this.form.value))
+        this.store.dispatch(registerAction(this.form.value));
     }
 }
